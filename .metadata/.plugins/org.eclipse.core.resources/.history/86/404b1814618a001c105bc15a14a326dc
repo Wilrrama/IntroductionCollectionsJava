@@ -1,0 +1,31 @@
+package map;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class ExemploMap {
+
+	public static void main(String[] args) {
+		
+		
+		System.out.println("Crie um dicionario que relacione os modelos respectivos");
+		
+		Map<String, Double> carrosPopulares = new HashMap<>() {{
+			put("Gol",14.4);
+			put("Uno",15.6);
+			put("Mobi",16.1);
+			put("HB20",14.5);
+			put("Kwid",15.6);
+			
+		}};
+		System.out.println(carrosPopulares.toString());
+		
+		System.out.println("Substitua o consumo do gol por 15,2 km/l");
+		carrosPopulares.put("Gol", 15.2);
+		
+		System.out.println(carrosPopulares);
+		
+		System.out.println("Confira se o modelo tucson esta no dicionario" + carrosPopulares.containsKey("tucson"));
+	}
+
+}
